@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import 'antd/dist/reset.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Fonts/Freight/Freight2.ttf';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
