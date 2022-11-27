@@ -15,6 +15,7 @@ import { Layout } from 'antd';
 import Slider from './components/slider';
 import Banner from './components/banner';
 import MainHeader from './components/Abc';
+import Slider2 from './components/slider2'
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -38,6 +39,7 @@ function App() {
 
 
       <Slider />
+      <Slider2 />
 
 
 

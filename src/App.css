@@ -116,6 +116,10 @@ body {
   padding: 0;
 }
 
+.swiper-pagination-bullets {
+  display: none;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -125,6 +129,7 @@ body {
   text-align: center;
   font-size: 18px;
   background: #fff;
+  /* margin-right: 10px!important; */
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -144,6 +149,49 @@ body {
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
+}
+
+.ant-card-meta{
+  display: block!important;
+}
+
+.ant-card-meta-title{
+  font-weight: 700!important;
+}
+.ant-layout{
+  background-color: #fff!important;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+}
+
+.slider-main-div{
+  margin-top: 80px;
+}
+
+.headingStyle{
+  font-weight: 700;
+  font-size: 28px;
+  padding: 20px 0px;
+  text-align: left;
+}
+.paraStyle{
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 0px;
+}
+
+.btn-browseCars{
+  display: flex;
+  background-color: #593CFB;
+  border-radius: 0px;
+  color: white;
+  padding: 12px 18px;
+  border-width: 0px;
+}
+.browseCars-style{
+  padding: 0px 30px;
+  margin-top: 30px;
 }
