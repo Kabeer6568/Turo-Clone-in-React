@@ -125,6 +125,10 @@ body {
   height: 100%;
 }
 
+.mySwiper{
+  padding-bottom: 20px!important
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -194,4 +198,7 @@ body {
 .browseCars-style{
   padding: 0px 30px;
   margin-top: 30px;
+}
+.card-shadow{
+  box-shadow: 0 2px 4px 0 rgb(35 31 32 / 20%), 0 0 1px 0 rgb(35 31 32 / 10%);
 }
