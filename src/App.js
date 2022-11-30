@@ -17,6 +17,10 @@ import Banner from './components/banner';
 import MainHeader from './components/Abc';
 import Slider2 from './components/slider2';
 import Destination from './components/destinationSlider'
+import DayDreams from './components/daydreams'
+import ExperienceSlider from './components/expirenceSlider'
+import Testimonials from './components/testimonials'
+
 
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -43,7 +47,10 @@ function App() {
       <Slider2 />
 
       <Destination />
+      <DayDreams />
 
+      <ExperienceSlider />
+      <Testimonials />
 
 
 
