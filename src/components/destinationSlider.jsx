@@ -24,7 +24,7 @@ const Destination = () => {
         <>
         <Container className="contaiber-style slider-main-div">
         <Swiper
-            slidesPerView={6}
+            
             spaceBetween={15}
             loop={true}
             pagination={{
@@ -32,7 +32,7 @@ const Destination = () => {
             }}
             breakpoints={{
                 640: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
                     spaceBetween: 20,
                 },
                 768: {

@@ -22,7 +22,7 @@ const DayDreams = () => {
                                 <Col></Col>
                                 <Col xs={8}>
                                     <h2 className='mainSub-heading'>
-                                        Fuel your daydreams
+                                        Fuel your day dreams
                                     </h2>
 
                                     <p className='mainSub-heading-text'>
