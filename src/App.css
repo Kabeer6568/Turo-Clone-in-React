@@ -308,3 +308,8 @@ body {
   text-align: left;
   padding-top: 30px;
 }
+
+.main-dropdown{
+  width: 200px!important;
+  margin-left: 10px;
+}

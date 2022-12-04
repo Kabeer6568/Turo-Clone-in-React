@@ -4,7 +4,32 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 // import './App.css';
-import Logo from './images/logo.PNG'
+import Logo from './images/logo.PNG';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { DownOutlined, SmileOutlined } from '@ant-design/icons';
+import { Dropdown, Space } from 'antd';
+const items = [
+    {
+        key: '1',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+                Login
+            </a>
+        ),
+    },
+    {
+        key: '2',
+        label: (
+            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+                Signup
+            </a>
+        ),
+    }
+    
+];
+
+
+
 
 const MainHeader = () => {
     return (
@@ -25,6 +50,20 @@ const MainHeader = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
                             <Button className='btn-style' variant="outline-dark">Become a host</Button>
+                        </Navbar.Text>
+                        <Navbar.Text>
+                            <Dropdown className="main-dropdown"
+                                menu={{
+                                    items,
+                                }}
+                            >
+                                <a onClick={(e) => e.preventDefault()}>
+                                    <Space>
+                                    <GiHamburgerMenu />
+                                        
+                                    </Space>
+                                </a>
+                            </Dropdown>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
