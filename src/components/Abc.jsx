@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 // import './App.css';
 import Logo from './images/logo.PNG';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { DownOutlined, SmileOutlined } from '@ant-design/icons';
-import { Dropdown, Space } from 'antd';
+import { Dropdown, Space, Button, Modal } from 'antd';
+
 const items = [
     {
         key: '1',
@@ -25,13 +26,25 @@ const items = [
             </a>
         ),
     }
-    
+
 ];
 
 
 
 
 const MainHeader = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+
     return (
         <>
             <Navbar style={{ backgroundColor: '#f4f4f4' }}>
@@ -59,8 +72,7 @@ const MainHeader = () => {
                             >
                                 <a onClick={(e) => e.preventDefault()}>
                                     <Space>
-                                    <GiHamburgerMenu />
-                                        
+                                        <GiHamburgerMenu />
                                     </Space>
                                 </a>
                             </Dropdown>
