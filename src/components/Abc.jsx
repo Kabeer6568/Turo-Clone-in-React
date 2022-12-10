@@ -13,6 +13,7 @@ import { Dropdown, Space, Button, Modal } from 'antd';
 
 
 
+
 const MainHeader = () => {
 
     
@@ -47,9 +48,9 @@ const MainHeader = () => {
             label: (
                 <>
                 <a type="primary" onClick={showModal2}>
-        Open Modal
+        Open Modal 1
       </a>
-      <Modal title="Basic Modal" open={showModal2} onOk={handleOk2} onCancel={handleCancel2}>
+      <Modal title="Basic Modal 1" open={isModalOpen2} onOk={handleOk2} onCancel={handleCancel2}>
         <p>Some contents...</p>
         <p>Some contents...</p>
         <p>Some contents...</p>
