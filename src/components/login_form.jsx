@@ -2,14 +2,43 @@ import React, { useState } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { DownOutlined, SmileOutlined } from '@ant-design/icons';
-import { Dropdown, Space, Button, Modal, Form, Input, Checkbox, InputNumber } from 'antd';
+import { Dropdown, Space, Button, Modal, Form, Input, Checkbox, InputNumber, Col, Row } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 
 
 
-const LoginForm = ()=>{
+
+
+
+// const layout = {
+//     labelCol: {
+//       span: 4,
+//     },
+//     wrapperCol: {
+//       span: 20,
+//     },
+//   };
+  
+  /* eslint-disable no-template-curly-in-string */
+  const validateMessages = {
+    required: '${label} is required!',
+    types: {
+      email: '${label} is not a valid email!',
+      number: '${label} is not a valid number!',
+    },
+    number: {
+      range: '${label} must be between ${min} and ${max}',
+    },
+  };
+  /* eslint-enable no-template-curly-in-string */
+  
+
+const LoginForm = ({login})=>{
+    
+
 
     const onFinish = (values) => {
+        login(values)
         console.log('Success:', values);
       };
       const onFinishFailed = (errorInfo) => {
@@ -39,6 +68,11 @@ const LoginForm = ()=>{
         setIsModalOpen2(false);
     };
 
+    
+    
+
+
+    
 
     const items = [
         {
@@ -101,6 +135,13 @@ const LoginForm = ()=>{
       </Form.Item>
     </Form>
 
+
+
+
+
+{/* Signup */}
+
+
       </Modal>
       </>
             ),
@@ -113,9 +154,63 @@ const LoginForm = ()=>{
         SignUp
       </a>
       <Modal title="Basic Modal" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-        <p>Some contents.2</p>
-        <p>Some contents2</p>
-        <p>Some contents.2</p>
+      {/* <Form  name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
+      <Form.Item
+        name={['user', 'name']}
+        label="User Name"
+        rules={[
+          {
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name={['user', 'email']}
+        label="Email"
+        rules={[
+          {
+            type: 'email',
+            required: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item
+        name="password"
+        label="Password"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your Password!',
+          },
+        ]}
+      >
+        <Input
+          prefix={<LockOutlined className="site-form-item-icon" />}
+          type="password"
+          placeholder="Password"
+        />
+      </Form.Item>
+      <Form.Item name={['user', 'website']} label="Website">
+        <Input />
+      </Form.Item>
+      <Form.Item name={['user', 'introduction']} label="Introduction">
+        <Input.TextArea />
+      </Form.Item>
+      <Form.Item
+        // wrapperCol={{
+        //   ...layout.wrapperCol,
+        //   offset: 4,
+        // }}
+      >
+        <Button type="primary" htmlType="submit">
+          Submit
+        </Button>
+      </Form.Item>
+    </Form> */}
       </Modal>
       </>
             ),

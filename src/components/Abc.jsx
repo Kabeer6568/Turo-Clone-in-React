@@ -11,13 +11,29 @@ import { Dropdown, Space, Button, Modal, Form, Input, Checkbox, InputNumber } fr
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
 
 import LoginForm from "./login_form";
+import { getAuth, createUserWithEmailAndPassword } from "./Firebase/firebase";
 
 
 
 const MainHeader = () => {
 
     
-
+    const auth = getAuth();
+    const login = (data)=>{
+    createUserWithEmailAndPassword(auth, data.username, data.password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log(user);
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        // ..
+      });
+    }
     
     return (
         <>
@@ -41,7 +57,7 @@ const MainHeader = () => {
                         <Navbar.Text>
                             
 
-                            <LoginForm />
+                            <LoginForm login={login} />
 
                         </Navbar.Text>
                     </Navbar.Collapse>
