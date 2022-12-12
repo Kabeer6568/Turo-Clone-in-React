@@ -82,7 +82,7 @@ const LoginForm = ({login})=>{
                 <a type="primary" onClick={showModal2}>
         SignIn
       </a>
-      <Modal title="Basic Modal 1" open={isModalOpen2} onOk={handleOk2} onCancel={handleCancel2}>
+      <Modal title="Login Now!" open={isModalOpen2} onOk={handleOk2} onCancel={handleCancel2}>
       <Form
       name="normal_login"
       className="login-form"

@@ -14,7 +14,7 @@ import { DatePicker, Input } from 'antd';
 import { Layout } from 'antd';
 import Slider from './components/slider';
 import Banner from './components/banner';
-import MainHeader from './components/Abc';
+import MainHeader from './components/MainHeader';
 import Slider2 from './components/slider2';
 import Destination from './components/destinationSlider'
 import DayDreams from './components/daydreams'
