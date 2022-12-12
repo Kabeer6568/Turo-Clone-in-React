@@ -9,7 +9,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { DownOutlined, SmileOutlined } from '@ant-design/icons';
 import { Dropdown, Space, Button, Modal, Form, Input, Checkbox, InputNumber } from 'antd';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-
+import swal from 'sweetalert';
 import LoginForm from "./login_form";
 import { getAuth, createUserWithEmailAndPassword } from "./Firebase/firebase";
 
@@ -25,12 +25,14 @@ const MainHeader = () => {
         // Signed in 
         const user = userCredential.user;
         console.log(user);
+        swal("Good job!", "You are Logged In!", "success");
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorMessage);
+        swal("Error!", "Invalid Email Address!", "error");
         // ..
       });
     }
